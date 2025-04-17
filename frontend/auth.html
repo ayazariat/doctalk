@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOCTALK - Assistant Médical Intelligent</title>
+    <link rel="stylesheet" href="auth.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="auth-container">
+      <div class="medical-illustration" aria-hidden="true">
+        <div class="animation-container">
+          <div class="pulse-circle"></div>
+          <img
+            src="public\assets\images\medibot.png"
+            alt="Medibot"
+            class="medical-icon"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="auth-forms">
+        <!-- Formulaire de Connexion -->
+        <form id="loginForm" class="auth-form active" novalidate>
+          <h1 class="form-title">Connexion Sécurisée</h1>
+          <div class="input-group">
+            <i class="fas fa-user-shield"></i>
+            <input
+              type="email"
+              id="loginEmail"
+              placeholder="Email Médical"
+              required
+            />
+            <span class="error-message" id="loginEmailError"></span>
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock-medical"></i>
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Mot de passe"
+              required
+            />
+            <button type="button" class="toggle-password">
+              <i class="fas fa-eye-slash"></i>
+            </button>
+            <span class="error-message" id="loginPasswordError"></span>
+          </div>
+          <button type="submit" class="auth-btn">
+            <i class="fas fa-sign-in-alt"></i> Accès Sécurisé
+          </button>
+          <p class="switch-form">
+            Nouveau patient?
+            <button type="button" class="switch-link">Créer un compte</button>
+          </p>
+        </form>
+
+        <!-- Formulaire d'Inscription -->
+        <form id="registerForm" class="auth-form" novalidate>
+          <h1 class="form-title">Enregistrement Patient</h1>
+          <div class="input-group">
+            <i class="fas fa-hospital-user"></i>
+            <input
+              type="text"
+              id="registerName"
+              placeholder="Nom Complet"
+              required
+            />
+            <span class="error-message" id="registerNameError"></span>
+          </div>
+          <div class="input-group">
+            <i class="fas fa-id-card-medical"></i>
+            <input
+              type="email"
+              id="registerEmail"
+              placeholder="Email Professionnel"
+              required
+            />
+            <span class="error-message" id="registerEmailError"></span>
+          </div>
+          <div class="input-group">
+            <i class="fas fa-key-medical"></i>
+            <input
+              type="password"
+              id="registerPassword"
+              placeholder="Créer un mot de passe"
+              required
+            />
+            <div class="password-strength">
+              <div class="strength-bar"></div>
+              <span class="strength-label">Sécurité</span>
+            </div>
+            <span class="error-message" id="registerPasswordError"></span>
+          </div>
+          <fieldset class="role-selection">
+            <legend>Type de compte</legend>
+            <label class="role-option">
+              <input type="radio" name="role" value="patient" checked />
+              <div class="role-card">
+                <i class="fas fa-user-injured"></i>
+                <span>Patient</span>
+              </div>
+            </label>
+            <label class="role-option">
+              <input type="radio" name="role" value="admin" />
+              <div class="role-card">
+                <i class="fas fa-user-md"></i>
+                <span>Administrateur</span>
+              </div>
+            </label>
+          </fieldset>
+          <button type="submit" class="auth-btn">
+            <i class="fas fa-file-medical"></i> S'enregistrer
+          </button>
+          <p class="switch-form">
+            Déjà enregistré?
+            <button type="button" class="switch-link">Se connecter</button>
+          </p>
+        </form>
+      </div>
+
+      <div class="security-badge" role="status">
+        <i class="fas fa-shield-alt"></i>
+        <span>Chiffrement AES-256 • HIPAA/GDPR Compliant</span>
+      </div>
+    </div>
+    <script src="auth.js"></script>
+  </body>
+</html>
