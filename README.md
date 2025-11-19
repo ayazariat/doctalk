@@ -45,15 +45,6 @@ L’assistant analyse les entrées et fournit un diagnostic simulé.
 
 Les résultats sont affichés avec des recommandations basiques et des explications sur les analyses.
 
-Organisation du projet
-doctalk/
-│
-├─ frontend/          # Fichiers HTML, CSS, JS et Bootstrap
-├─ backend/           # Scripts Python pour le traitement et le NLP
-├─ data/              # Fichiers de données pour tests et NLP
-├─ docs/              # Diagrammes UML et documentation
-└─ README.md
-
 Contributions
 
 Les contributions sont les bienvenues ! Pour proposer des améliorations ou signaler des bugs, merci d’utiliser les issues ou de soumettre une pull request.
